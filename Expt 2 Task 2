@@ -1,8 +1,7 @@
-/*
-Mohammad Ayan Khan
-28 / 251M031
-Dif - F
-*/
+//Name: Talha Nahori
+//UIN: 251C004
+//Class: Civil
+//Div: B
 #include <stdio.h>
 int main() {
     int start, end, i, sum = 0;

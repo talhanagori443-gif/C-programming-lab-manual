@@ -1,0 +1,25 @@
+/*
+Mohammad Ayan Khan
+28 / 251M031
+Dif - F
+*/
+#include <stdio.h>
+
+int main() {
+    int a, b, sum;
+    int *p1, *p2;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    // Assign addresses to pointers
+    p1 = &a;
+    p2 = &b;
+
+    // Add values using pointers
+    sum = *p1 + *p2;
+
+    printf("Sum = %d\n", sum);
+
+    return 0;
+}

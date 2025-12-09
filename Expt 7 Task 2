@@ -1,0 +1,48 @@
+/*
+Mohammad Ayan Khan
+28 / 251M031
+Dif - F
+*/
+#include <stdio.h>
+
+int main() {
+    int r, c;
+    printf("Enter number of rows and columns: ");
+    scanf("%d %d", &r, &c);
+
+    int a[r][c], b[r][c], sum[r][c];
+    
+    // Input matrix A
+    printf("Enter elements of Matrix A:\n");
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < c; j++) {
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+    // Input matrix B
+    printf("Enter elements of Matrix B:\n");
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < c; j++) {
+            scanf("%d", &b[i][j]);
+        }
+    }
+
+    // Adding matrices
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < c; j++) {
+            sum[i][j] = a[i][j] + b[i][j];
+        }
+    }
+
+    // Output the result
+    printf("Sum of the matrices:\n");
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < c; j++) {
+            printf("%d ", sum[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}

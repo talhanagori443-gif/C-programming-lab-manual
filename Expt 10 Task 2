@@ -1,0 +1,30 @@
+/*
+Mohammad Ayan Khan
+28 / 251M031
+Dif - F
+*/
+#include <stdio.h>
+
+int main() {
+    int arr[100], n, i;
+    int *ptr;
+
+    printf("Enter size of array: ");
+    scanf("%d", &n);
+
+    printf("Enter %d elements:\n", n);
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    // Point to the last element of the array
+    ptr = &arr[n - 1];
+
+    printf("Array in reverse order:\n");
+    for (i = n - 1; i >= 0; i--) {
+        printf("%d ", *ptr);
+        ptr--;  // move pointer backward
+    }
+
+    return 0;
+}

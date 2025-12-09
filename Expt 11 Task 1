@@ -1,0 +1,82 @@
+/*
+Mohammad Ayan Khan
+28 / 251M031
+Dif - F
+*/
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Employee {
+    int id;
+    char name[50];
+    float salary;
+};
+
+void addEmployee() {
+    struct Employee e;
+    FILE *fp = fopen("employee_db.txt", "a");
+
+    if (fp == NULL) {
+        printf("Error opening file!\n");
+        return;
+    }
+
+    printf("Enter Employee ID: ");
+    scanf("%d", &e.id);
+
+    printf("Enter Employee Name: ");
+    scanf("%s", e.name);
+
+    printf("Enter Salary: ");
+    scanf("%f", &e.salary);
+
+    fprintf(fp, "%d %s %.2f\n", e.id, e.name, e.salary);
+
+    fclose(fp);
+    printf("Employee added successfully!\n");
+}
+
+void displayEmployees() {
+    struct Employee e;
+    FILE *fp = fopen("employee_db.txt", "r");
+
+    if (fp == NULL) {
+        printf("No data found!\n");
+        return;
+    }
+
+    printf("\n--- Employee Records ---\n");
+    while (fscanf(fp, "%d %s %f", &e.id, e.name, &e.salary) != EOF) {
+        printf("ID: %d\nName: %s\nSalary: %.2f\n\n", e.id, e.name, e.salary);
+    }
+
+    fclose(fp);
+}
+
+int main() {
+    int choice;
+
+    while (1) {
+        printf("\nEmployee Database Menu:\n");
+        printf("1. Add Employee\n");
+        printf("2. Display Employees\n");
+        printf("3. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                addEmployee();
+                break;
+            case 2:
+                displayEmployees();
+                break;
+            case 3:
+                exit(0);
+            default:
+                printf("Invalid choice! Try again.\n");
+        }
+    }
+
+    return 0;
+}

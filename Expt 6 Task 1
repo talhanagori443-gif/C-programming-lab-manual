@@ -1,0 +1,21 @@
+/*
+Mohammad Ayan Khan
+28 / 251M031
+Dif - F
+*/
+#include <stdio.h>
+
+void counter() {
+    static int count = 0;   // static variable retains value between calls
+    count++;
+    printf("Function called %d times\n", count);
+}
+
+int main() {
+    counter();
+    counter();
+    counter();
+    counter();
+
+    return 0;
+}

@@ -1,0 +1,32 @@
+/*
+Mohammad Ayan Khan
+28 / 251M031
+Dif - F
+*/
+#include <stdio.h>
+
+int main() {
+
+    int physics, chemistry, mathematics;
+    int average;
+
+    printf("\nEnter Physics Marks = ");
+    scanf("%d", &physics);
+
+    printf("\nEnter Chemistry Marks = ");
+    scanf("%d", &chemistry);
+
+    printf("\nEnter Mathematics Marks = ");
+    scanf("%d", &mathematics);
+
+    average = (physics + chemistry + mathematics) / 3;
+    printf("\nAverage is %d", average);
+
+    if (average >= 50) {
+        printf("\nThe student is eligible for PCM Stream.");
+    } else {
+        printf("\nThe student is not eligible for PCM Stream.");
+    }
+
+    return 0;
+}

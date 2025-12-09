@@ -1,0 +1,18 @@
+/*
+Mohammad Ayan Khan
+28 / 251M031
+Dif - F
+*/
+#include <stdio.h>
+
+int main () {
+
+    printf("\nName = Mohammad Ayan Khan.");
+    printf("\nAge = 19.");
+    printf("\nClass = FE / Mechanical.");
+    printf("\nDiv = F.");
+    printf("\nUIN = 251M031.");
+
+    return 0;
+}
+    
